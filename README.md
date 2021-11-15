@@ -1,10 +1,10 @@
-# WebConfig
+# AsyncWebConfig
 
 This Arduino Library works with ESP8266 and ESP32
 
 It allows to edit configuration data by a web form. The configuration data will be storde in the SPIFFS and can be reloades from there.
-The web form can be free formatted using JSON.
-If you start an AccessPoint, you can use WebConfig to edit access information for the local Network
+The web form can be free formatted using JSON. This library works with ESPAsyncWebServer
+If you start an AccessPoint, you can use AsyncWebConfig to edit access information for the local Network
 
 ## Constants:
 
