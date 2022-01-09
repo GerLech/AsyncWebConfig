@@ -360,10 +360,8 @@ void addMultiOption(char * buf, String name, uint8_t option, String label, Strin
       response->print(_buf);
     }
     if (_buttons == BTN_CONFIG) {
-      Serial.println("btn start");
       sprintf(_buf,HTML_END);
       response->print(_buf);
-      Serial.println("btn end");
     } else {
       response->print("<div class='zeile'>\n");
       if ((_buttons & BTN_DONE) == BTN_DONE) {
@@ -460,7 +458,7 @@ boolean AsyncWebConfig::writeConfig(){
 }
 //delete configuration file
 boolean AsyncWebConfig::deleteConfig(const char * filename){
-  return remove(filename);
+  return SPIFFS.remove(filename);
 }
 //delete default configutation file
 boolean AsyncWebConfig::deleteConfig(){
